@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>범죄 수사 게임</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 헤더 섹션 -->
+    <header>
+        <h1>범죄 수사 게임</h1>
+    </header>
+
+    <!-- 게임 메인 영역 -->
+    <main>
+        <div id="locations">
+            <button class="location-button" data-location="마당">마당</button>
+            <button class="location-button" data-location="거실">거실</button>
+            <button class="location-button" data-location="부엌">부엌</button>
+            <button class="location-button" data-location="화장실">화장실</button>
+            <button class="location-button" data-location="에바의 방">에바의 방</button>
+            <button class="location-button" data-location="부모님의 방">부모님의 방</button>
+            <button class="location-button" data-location="차고">차고</button>
+            <button class="location-button" data-location="서재">서재</button>
+        </div>
+        <button id="identifyButton" disabled>범인 지목하러 가기</button>
+    </main>
+
+    <!-- 클루 모달 -->
+    <div id="clueModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeClueModal">&times;</span>
+            <p>DNA 단서 발견!</p>
+            <button id="analyzeButton">분석</button>
+        </div>
+    </div>
+
+    <!-- 성공 모달 -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeSuccessModal">&times;</span>
+            <p>성공적으로 범인을 검거하였습니다!</p>
+            <button id="restartButton">다시하기</button>
+            <button id="exitButton">종료하기</button>
+        </div>
+    </div>
+
+    <!-- 실패 모달 -->
+    <div id="failureModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeFailureModal">&times;</span>
+            <p>범인 검거 실패!</p>
+            <button id="restartButtonFail">다시하기</button>
+            <button id="exitButtonFail">종료하기</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
